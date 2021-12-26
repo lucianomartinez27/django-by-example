@@ -9,13 +9,16 @@
     <link href="{% static 'css/blog.css' %}" rel="stylesheet">
 </head>
 <body>
+    <header>
+        <a class="logo" href="/blog"><p> Home</p></a>
+    </header>
     <div id="content">
         {% block content %}
         {% endblock %}
     </div>
     <div id="sidebar">
         <h2>My blog</h2>
-        <p>This is my blog.</p>
+        <p>This is my blog. Some kind of personal diary</p>
     </div>
 </body>
 </html>

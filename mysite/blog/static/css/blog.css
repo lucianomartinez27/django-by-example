@@ -8,6 +8,9 @@ a {
     color:#00abff;
     text-decoration:none; 
 }
+header { 
+    margin: 5px 0 0 30px;
+}
 
 h1 { 
     font-weight:normal;
@@ -93,4 +96,9 @@ input[type=submit] {
 
 .tags {
     font-weight: bold;
+}
+
+header a.logo {
+    font-size: 25px;
+    text-weight:bold;
 }
