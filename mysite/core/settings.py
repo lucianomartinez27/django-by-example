@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'taggit',
     'django.contrib.sites',
     'django.contrib.sitemaps',
+    'django.contrib.postgres',
 ]
 
 MIDDLEWARE = [
@@ -83,11 +84,14 @@ EMAIL_USE_TLS = True
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
+print( os.getenv('EMAIL_HOST_PASSWORD'))
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+
+        'NAME': 'blog',
+        'USER': 'blog',
+        'PASSWORD': os.getenv('DB_PASSWORD')
     }
 }
 
